@@ -6,7 +6,7 @@ export function Login() {
             <h1>BIENVENIDO</h1>
             <form action="">
                 <input type="text" placeholder="Ingrese usuario"></input>
-                <input type="password" placeholder="Ingrese contraseña"></input>  
+                <input type="password" placeholder="Ingrese contraseña"></input><br>  
                 <a href="#/home">Ingresar</a>
             </form>
         </div>
