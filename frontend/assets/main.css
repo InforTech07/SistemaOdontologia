@@ -1,0 +1,375 @@
+html {
+    min-height: 100%;
+}
+ 
+body {
+        background: #B0CEE1;
+        
+}
+.showcase {
+
+    width: 100%;
+    height: 200px;
+    background: url(https://images.pexels.com/photos/4269203/pexels-photo-4269203.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center center/cover;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+.principales{
+    display: grid;
+    grid-template-columns: 22% 20% 20% 20%;
+    gap: 6%;
+    margin: 10px 0;
+    color: black;
+}
+.principales img {
+    width: 100%;
+    height: 150px;
+
+}
+.principales h3{
+    font-size: 20px;
+    margin: 10px 0;
+    color: black;
+}
+.misvis{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 25px;
+    margin: 10px 0;
+    color: black;
+}
+.misvis img{
+    width: 100%;
+    height: 200px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color:#023f62;
+    padding: 5px;
+}
+  
+.grid-item {
+    background-color: #313945;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.grid-item img{
+    width: 80%;
+    height: 150px;
+}
+.grid-item a{
+    color: snow;
+    text-decoration: none;
+}
+
+.grid-item input{
+      font-size: 1rem;
+}
+
+.grid-item h1{
+    color: #ffffff;
+}
+
+
+.menuapp{
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: #313945;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+.menuapp a {
+    text-decoration: none;
+    color: snow;
+    font-size: 15px;
+    margin-left: 5px;
+}
+.menuapp img {
+    width: 80%;
+    height: 100px;
+}
+
+.mastHead{
+    position: relative;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    height: 40px;
+    top: 0;
+    padding: 15px 60px;
+    background: #023F62;
+    border-bottom: 1px solid dimgray;
+    margin-bottom: 3px;      
+}
+.mastHead a{
+    text-decoration: none;
+    color: snow;
+    font-size: 20px;
+    margin-left: 5px;
+}
+.mastHead ul{
+    list-style-type: none;
+    text-align: center;
+}
+.mastHead li{
+    display: inline;
+    text-align: center;
+    margin: 0 10 px 0 0;
+}
+.mastHead li a{
+    color: snow;
+    text-decoration: none;
+    padding: 2px 15px;
+    font-size: 25px;
+}
+.mastHead a:hover{
+    color: dimgray;
+    border-bottom: dimgray;
+}
+
+
+.Content{
+    display: grid;
+    grid-template-columns: 20% 76%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.formulario-registro {
+    width: 80%;
+    background: #023f62;
+    padding: 20px;
+    margin: auto;
+    margin-top: 1px;
+    border-radius: 4px;
+    color: white;
+    text-align: left;
+}
+    
+.formulario-registro h4 {
+        font-size: 10px;
+        margin-bottom: 2px;
+}
+ 
+.formulario-registro input{
+    width: 90%;
+    font-size: 10px;
+    border-radius: 4px;
+    border: 1px solid dimgray;
+}
+
+.controles {
+        width: 90%;
+        background: #313b44;
+        padding: 1px;
+        border-radius: 4px;
+        border: 1px solid #ffffff;
+        margin-bottom: 1px;  
+        color: white;
+}
+
+.formulario-registro .botons {
+        width: 90%;
+        background: #d1d4d4;
+        border: none;
+        padding: 3px;
+        color: black;
+        margin: 16px 0;
+        font-size: 8px;
+}
+    
+
+
+
+
+iframe{
+    border-bottom: 1px solid cornflowerblue;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+
+.Avatar{
+    text-align: center;
+    align-items: center;
+}
+
+.Avatar img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+
+}
+
+span{
+    color: snow;
+}
+
+
+
+.MainContent{
+    padding: 20px 20px 20px 20px;
+}
+
+.pag{
+    color: black;
+    background: #ffffff;
+    text-align: center;
+    align-content: center;
+}
+.pag h3{
+    font-size: 40px;
+}
+.pag span{
+    color: black;
+}
+
+footer{
+    background-color: #313945;
+    border-top:1px solid dimgrey ;
+    align-items: center;
+    text-align: center;
+}
+footer span{  
+    margin-top: 5px;
+    color: snow;
+}
+
+footer li{
+    color: snow;
+    list-style: none;
+    font-size: 12px;
+}
+.footercontact{
+    display: none;
+}
+
+@media only screen and (max-width: 900px){
+    .mastHead{
+        height: 30px;
+    }
+    .mastHead li a{  
+        padding: 1px 2px;
+        font-size: 15px;
+    }
+    .mastHead a {
+        font-size: 20px;
+    }
+    .Content{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    
+    div#procontent {
+        display: none;
+        padding: 10px;
+        background-color: #f6f6f6;
+        width: 200px;
+        cursor: pointer;
+    }
+
+   
+
+    .Row img{
+        width: 80%;
+        height: 80%;
+        padding: 10px 10px 10px 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .Row{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background: #000428;
+        border-bottom: 1px solid cornflowerblue;
+        color: black;
+        align-content: center;
+        font-size: 15px;
+    }
+    .footercontact{
+        display: block;
+       
+        text-decoration: none;
+        color: snow;
+    }
+    .footercontact li {
+        list-style: none;
+    }
+    .footercontact li a {
+        margin-left: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .mastHead{
+        height: 30px;
+    }
+    .mastHead li a{  
+        padding: 1px 2px;
+        font-size: 12px;
+    }
+    .mastHead a {
+        font-size: 15px;
+    }
+    .Content{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    
+    #show,
+    #hide {
+        display: none;
+    }
+
+    div#procontent {
+        display: none;
+        padding: 10px;
+        background-color: #f6f6f6;
+        width: 200px;
+        cursor: pointer;
+    }
+
+    
+    .Row img{
+        width: 80%;
+        height: 80%;
+        padding: 1px 1px 1px 1px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .Row{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background: #000428;
+        border-bottom: 1px solid cornflowerblue;
+        color: snow;
+        align-content: center;
+        font-size: 12px;
+    }
+    .footercontact{
+        display: block;
+       
+        text-decoration: none;
+        color: snow;
+    }
+    .footercontact li {
+        list-style: none;
+    }
+    .footercontact li a {
+        margin-left: 20px;
+    }
+
+    
+  }
