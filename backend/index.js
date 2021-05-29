@@ -15,16 +15,13 @@ app.use(morgan('dev')); //ver peticiones a nuestro sevidor.
 
 
 //3.Routes  rutas del servidor
-app.use('/api/user',require('./routes/user'));
-app.use('/api/patient',require('./routes/patient'));
+app.use('/api/user',require('./routers/user'));
+app.use('/api/patient',require('./routers/patient'));
 app.use("/api/citamedica",require("./routers/citamedica"));
 app.use("/api/reportes",require("./routers/reportes"));
 app.use("/api/expediente",require("./routers/expediente"));
 app.use("/api/medicos",require("./routers/medicos"));
 app.use("/api/ayuda",require("./routers/ayuda"));
-
-
-
 
 //4.static file
 app.use(express.static(path.join(__dirname,'../frontend')));
