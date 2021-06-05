@@ -1,4 +1,4 @@
-import{MenuApp} from "./MenuApp.js";
+import{MenuApp} from "../MenuApp.js";
 export function Home() {
     const $content = document.createElement('div');
     const $ContentHome = document.createElement('div');
