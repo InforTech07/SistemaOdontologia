@@ -2,13 +2,13 @@ export function Homeapp() {
     const $contenthome=document.createElement('div');
     $contenthome.classList.add('pag');
     $contenthome.innerHTML=`
-    <div class="Container">
+    <div class="">
         <header class="showcase">
-
-            <h2>Novedades</h2>
-            <p>El Ministerio de Salud de El Salvador está comprometido con tu salud Odontologica</p>
+            <h1>NOVEDADES</h1>
+            <h2>El Ministerio de Salud de El Salvador está comprometido con tu salud Odontologica</h2>
 
         </header>
+        <h2 id="Servicios" > SERVICIOS </h2>
         <div class="principales">
             <div>
                 <img src="https://images.pexels.com/photos/3845757/pexels-photo-3845757.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Mision";
@@ -32,12 +32,21 @@ export function Homeapp() {
             </div>
 
         </div>
-        
-            <source>"<iframe width="90%" height="300" marging="25%" 
-            align-items: center src="https://www.youtube.com/embed/6JDA61PCGQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2 id="Noticias"> NOTICIAS RELEVANTES </h2>
+        <div class="ContainerVideo">
+            <div>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/6JDA61PCGQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/3OjBoYgQj_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/jsgviobe8wE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
  
-        
     </div>
+    <h2 id="Mision"> MISION - VISION </h2>
     <div class="misvis">
         <div>
             <img src="https://elsalvadorgram.com/wp-content/uploads/2020/05/Ministro-de-Salud.jpg" alt="Mision";
@@ -49,6 +58,7 @@ export function Homeapp() {
             <h3> VISION </h3>
             <P> Para el año 2025 el Ministerio de Salud del Salvador será reconocido por el desarrollo de centros de cuidado clínico con enfoque de atención basada en valor, consolidándose como una institución con estándares superiores de calidad, innovación y desarrollo tecnológico y como un gran lugar para trabajar. </P>
         </div>
+    </div>
         `;
     return $contenthome;
 }

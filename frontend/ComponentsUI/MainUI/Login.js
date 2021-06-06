@@ -11,7 +11,7 @@ export function Login() {
             </form>
         </div>
         <div class="grid-item">    
-             <img src="http://www.salud.gob.sv/wp-content/uploads/2020/08/banner_web_wpminsal_2020-v2.png"/>
+             <img src="https://www.salud.gob.sv/wp-content/uploads/2020/10/banner_web_wpminsal_2020-v2-1.png"/>
         </div>  
         `;
     return $ContentLogin; 

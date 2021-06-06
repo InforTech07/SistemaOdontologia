@@ -1,14 +1,14 @@
 
-import { Homeapp } from "./Homeapp.js";
-import {Login} from "./Login.js";
-import {Home} from "./Home.js";
-import {Patients} from "./Patients.js";
-import {Qoutes} from "./Qoutes.js";
-import {Proceedings}from "./Proceedings.js"
-import {Doctor} from "./Doctor.js";
-import {Report} from "./Report.js";
-import {User} from "./User.js";
-import {Help} from "./Help.js";
+import { Homeapp } from "./MainUI/Homeapp.js";
+import {Login} from "./MainUI/Login.js";
+import {Home} from "./Pages/Home.js";
+import {Patients} from "./Pages/Patients.js";
+import {Qoutes} from "./Pages/Qoutes.js";
+import {Proceedings}from "./Pages/Proceedings.js"
+import {Doctor} from "./Pages/Doctor.js";
+import {Report} from "./Pages/Report.js";
+import {User} from "./Pages/User.js";
+import {Help} from "./Pages/Help.js";
 
 
 import PatientService from "../Services/PatientService.js"

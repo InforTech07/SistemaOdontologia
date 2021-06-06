@@ -3,25 +3,33 @@ html {
 }
  
 body {
-        background: #B0CEE1;
+        background: #303845;
         
 }
+
+.Container{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .showcase {
 
     width: 100%;
-    height: 200px;
-    background: url(https://images.pexels.com/photos/4269203/pexels-photo-4269203.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center center/cover;
+    height: 300px;
+    background: url(https://quepasasv.com/wp-content/uploads/2020/06/covid-san-sal.jpg) no-repeat center center/cover;
     padding-bottom: 50px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    
+    color: #ffffff;  
 }
 .principales{
     display: grid;
-    grid-template-columns: 22% 20% 20% 20%;
+    grid-template-columns: 20% 20% 20% 20%;
+    padding-left: 1%;
+    padding-right: 1%;
     gap: 6%;
     margin: 10px 0;
     color: black;
@@ -38,7 +46,9 @@ body {
 }
 .misvis{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 45% 45% ;
+    padding-left: 2%;
+    padding-right: 2%;
     gap: 25px;
     margin: 10px 0;
     color: black;
@@ -79,68 +89,79 @@ body {
     color: #ffffff;
 }
 
+#navegador ul{
+    list-style-type: none;
+    text-align: center;
+ }
 
+ #navegador li{
+    display: inline;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+
+ #navegador li a {
+    padding: 1px 1px 1px 1px;
+    color: snow;
+    text-decoration: none;
+    
+ }
+
+ #navegador li a:hover{
+    color: dimgray;
+ }
 .menuapp{
+    position: relative;
     display: grid;
     grid-template-columns: 100%;
-    background-color: #313945;
-    padding: 3px;
-    margin-bottom: 5px;
+    background-color: #3C4557;
+    box-shadow: 0px 10px #252B36;
+    margin-bottom: 1px;
+    border-bottom: dimgrey;
 }
-.menuapp a {
-    text-decoration: none;
-    color: snow;
-    font-size: 15px;
-    margin-left: 5px;
+
+
+.menuapp a{
+    font-size: 25px;
 }
-.menuapp img {
-    width: 80%;
+
+.Imgnav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #303845;   
+}
+.Imgnav img {
+    width: 200px;
     height: 100px;
 }
+
 
 .mastHead{
     position: relative;
     display: grid;
-    grid-template-columns: 70% 30%;
-    height: 40px;
+    grid-template-columns: 50% 50%;
+    height: 80px;
     top: 0;
     padding: 15px 60px;
     background: #023F62;
     border-bottom: 1px solid dimgray;
-    margin-bottom: 3px;      
+    margin-bottom: 1px;      
 }
-.mastHead a{
-    text-decoration: none;
-    color: snow;
-    font-size: 20px;
-    margin-left: 5px;
-}
-.mastHead ul{
-    list-style-type: none;
-    text-align: center;
-}
-.mastHead li{
-    display: inline;
-    text-align: center;
-    margin: 0 10 px 0 0;
-}
-.mastHead li a{
-    color: snow;
-    text-decoration: none;
-    padding: 2px 15px;
-    font-size: 25px;
-}
-.mastHead a:hover{
-    color: dimgray;
-    border-bottom: dimgray;
+.mastHead img{
+    width: 60px;
+    height: 60px;
 }
 
+.mastHead .social img{
+    width: 30px;
+    height: 30px;
+}
 
-.Content{
-    display: grid;
-    grid-template-columns: 20% 76%;
-    margin-left: 2%;
-    margin-right: 2%;
+.ContentHead{
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .formulario-registro {
@@ -187,7 +208,13 @@ body {
 }
     
 
-
+.ContainerVideo{
+    display: grid;
+    grid-template-columns: 30% 30% 30% ;
+    gap: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
 
 
 iframe{
@@ -234,7 +261,7 @@ span{
 }
 
 footer{
-    background-color: #313945;
+    background-color: #29303C;
     border-top:1px solid dimgrey ;
     align-items: center;
     text-align: center;

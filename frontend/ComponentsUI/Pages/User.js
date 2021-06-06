@@ -1,5 +1,4 @@
-import{MenuApp} from "./MenuApp.js";
-
+import{MenuApp} from "../MainUI/MenuApp.js";
 export function User() {
     const $content = document.createElement('div');
     const $user = document.createElement('div');

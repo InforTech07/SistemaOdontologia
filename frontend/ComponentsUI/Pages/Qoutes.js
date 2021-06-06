@@ -1,4 +1,4 @@
-import{MenuApp} from "./MenuApp.js";
+import{MenuApp} from "../MainUI/MenuApp.js";
 
 export function Qoutes() {
     const $content = document.createElement('div');

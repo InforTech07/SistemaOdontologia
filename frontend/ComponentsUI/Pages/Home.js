@@ -1,4 +1,4 @@
-import{MenuApp} from "../MenuApp.js";
+import{MenuApp} from "../MainUI/MenuApp.js";
 export function Home() {
     const $content = document.createElement('div');
     const $ContentHome = document.createElement('div');
@@ -9,7 +9,7 @@ export function Home() {
             <h1>AL SISTEMA</h1>
         </div>
         <div class="grid-item">    
-             <img src="http://www.salud.gob.sv/wp-content/uploads/2020/08/banner_web_wpminsal_2020-v2.png"/>
+             <img src="https://www.salud.gob.sv/wp-content/uploads/2020/10/banner_web_wpminsal_2020-v2-1.png"/>
         </div>  
         `;
     $content.appendChild(MenuApp());

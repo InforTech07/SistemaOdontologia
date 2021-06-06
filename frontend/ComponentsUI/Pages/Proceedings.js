@@ -1,4 +1,4 @@
-import{MenuApp} from "./MenuApp.js";
+import{MenuApp} from "../MainUI/MenuApp.js";
 
 export function Proceedings() {
     const $content = document.createElement('div');

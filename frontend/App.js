@@ -1,7 +1,7 @@
-import{ Head } from './components/Head.js';
-import { Body } from './components/Body.js';
-import { Footer }from './components/Footer.js';
-import { Router } from './components/Routers.js';
+import{ Head } from './componentsUI/MainUI/Head.js';
+import { Body } from './componentsUI/MainUI/Body.js';
+import { Footer }from './componentsUI/MainUI/Footer.js';
+import { Router } from './componentsUI/Routers.js';
 
 export function App() {
         const $root = document.getElementById('root');
