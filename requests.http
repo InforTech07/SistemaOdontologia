@@ -1,5 +1,5 @@
 ### Get ruta user
-GET http://localhost:3000/api/user
+GET http://localhost:3000/api/usuario
 
 
 ### post ruta user
@@ -11,15 +11,80 @@ Content-Type: application/json
     "contrasena":"123"
 }
 
-### actualizacion de datos
-PUT http://localhost:3000/api/user
+
+### post ruta user
+POST http://localhost:3000/api/usuario
 Content-Type: application/json
 
-{
-    "id":"3",
-    "usuario":"kevin",
-    "contrasena":"444"
+{ 
+    "nombres":"prueba",
+    "apellidos":"pruba",
+    "dui":"lslls",
+    "direccion":"lslsls",
+    "telefono":"kssuue", 
+    "cargo":"lsisie",
+    "usuario":"lsisie",
+    "contrasena":"123"
 }
+
+
+
+### actualizacion de datos
+PUT http://localhost:3000/api/paciente
+Content-Type: application/json
+
+{ 
+    "pnombres":"Miguel",
+    "papellidos":"Montes",
+    "pdui":"2435455",
+    "psexo":"Masculino",
+    "ptelefono":"456789",
+    "pdireccion":"san pedro",
+    "id":54
+}
+
 
 ### eliminando datos
 DELETE  http://localhost:3000/api/user/3
+
+
+### Get ruta user
+GET http://localhost:3000/api/paciente/Poncio
+
+
+
+
+
+
+### post ruta user
+POST http://localhost:3000/api/paciente
+Content-Type: application/json
+
+{
+    "pnombres":"Miguel",
+    "papellidos":"Montes",
+    "pdui":"2435455",
+    "psexo":"Masculino",
+    "ptelefono":"456789",
+    "pdireccion":"san pedro",
+    "rnombreapellido":"Pablo Montes",
+    "rparentesco":"hijo",
+    "rtelefono":"123456"
+}
+
+### post ruta user
+POST http://localhost:3000/api/paciente
+
+Content-Type: application/json
+
+{
+    "fecha":"2021-06-08T12:31:37.000Z",
+    "text":"holaprueba"
+}
+
+### Get ruta user
+GET  http://localhost:3000/api/auth/Carlosperez/345
+
+### Get ruta user
+GET  http://localhost:3000/api/inicio/32
+

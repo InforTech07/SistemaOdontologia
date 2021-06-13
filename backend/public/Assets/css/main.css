@@ -1,0 +1,521 @@
+html {
+    min-height: 100%;
+}
+ 
+body {
+        background: #023f62;;
+        
+}
+
+.Container{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.Container h5{
+    color: dimgrey;
+    text-decoration-line: underline;
+    text-decoration-color: dimgray;
+    /*border-bottom: 1px solid dimgray;*/
+}
+
+.showcase {
+
+    width: 100%;
+    height: 300px;
+    background: url(https://quepasasv.com/wp-content/uploads/2020/06/covid-san-sal.jpg) no-repeat center center/cover;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: #ffffff;  
+}
+.principales{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    padding-left: 1%;
+    padding-right: 1%;
+    gap: 6%;
+    margin: 10px 0;
+    color: black;
+}
+.principales img {
+    width: 100%;
+    height: 150px;
+
+}
+.principales h3{
+    font-size: 20px;
+    color: black;
+}
+.misvis{
+    display: grid;
+    grid-template-columns: 45% 45% ;
+    padding-left: 2%;
+    padding-right: 2%;
+    gap: 25px;
+    margin: 10px 0;
+    color: black;
+}
+.misvis img{
+    width: 100%;
+    height: 200px;
+}
+
+.grid-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 50% 50%;
+    background-color:#023f62;
+    padding: 5px;
+}
+  
+.grid-item {
+    position: relative;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.grid-item img{
+    width: 300px;
+    height: 300px;
+}
+.grid-item a{
+    color: snow;
+    text-decoration: none;
+}
+
+.grid-item input{
+      font-size: 1rem;
+}
+
+.grid-item h1{
+    color: #ffffff;
+}
+
+.grid-item span{
+    font-size: 30px;
+    color: dimgrey;
+}
+
+.Container{
+    background-color:#023f62;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+
+.grid-item-search {
+    position: relative;
+    margin-top: 50px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 10% 30% 60%;
+    border-bottom: 1px solid dimgray;
+    margin-bottom: 15px;
+}
+.grid-item-search form{
+    display: grid;
+    grid-template-columns: 65% 25%;
+    gap: 10%;
+}
+
+.grid-item-search img{
+    width: 80px;
+    height: 80px;
+}
+
+.grid-item-search button{
+    width: 100px;
+}
+
+.grid-item-search input{
+    width: 250px;
+}
+.grid-item-data {
+    position: relative;
+    border-bottom: 1px solid dimgray;
+    margin-top: 20px;
+}
+
+.grid-item-data form{
+    display: grid;
+    grid-template-columns: 15% 35%  15% 35%;
+}
+
+.grid-item-data input{
+    width: 80%;
+    font-size: 20px;
+}
+.grid-item-data span{
+    margin-left: 20px;
+}
+
+.grid-item-option{
+    position: relative;
+    display: grid;
+    place-items: center;
+    grid-template-columns:  30% 30% 30%;
+    gap: 10%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.grid-item-option img{
+    width: 80px;
+    height: 80px;
+}
+.grid-item-option button{
+    margin-left: 30px;
+}
+
+.grid-item-resultados{
+    position: relative;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.grid-item-resultados table, th, td {
+    border: 1px solid dimgrey;
+  }
+
+.grid-item-resultados thead {
+    background: #303845;
+}
+.grid-item-resultados tbody {
+    background: dimgrey;
+}
+.grid-item-resultados th{
+    width: 200px;
+    text-align: center;
+}
+
+#navegador ul{
+    list-style-type: none;
+    text-align: center;
+ }
+
+ #navegador li{
+    display: inline;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+
+ #navegador li a {
+    padding: 1px 1px 1px 1px;
+    color: snow;
+    text-decoration: none;
+    
+ }
+
+ #navegador li a:hover{
+    color: dimgray;
+ }
+.menuapp{
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: #3C4557;
+    box-shadow: 0px 10px #252B36;
+    margin-bottom: 1px;
+    border-bottom: dimgrey;
+}
+
+
+.menuapp a{
+    font-size: 25px;
+}
+
+.Imgnav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #303845;   
+}
+.Imgnav img {
+    width: 200px;
+    height: 100px;
+}
+
+
+.mastHead{
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 80px;
+    top: 0;
+    padding: 15px 60px;
+    background: #023F62;
+    border-bottom: 1px solid dimgray;
+    margin-bottom: 1px;      
+}
+.mastHead img{
+    width: 60px;
+    height: 60px;
+}
+
+.mastHead .social img{
+    width: 30px;
+    height: 30px;
+}
+
+.ContentHead{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+    
+
+.ContainerVideo{
+    display: grid;
+    grid-template-columns: 30% 30% 30% ;
+    gap: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+iframe{
+    border-bottom: 1px solid cornflowerblue;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+
+.Avatar{
+    text-align: center;
+    align-items: center;
+}
+
+.Avatar img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+
+}
+
+span{
+    color: snow;
+}
+
+
+
+.MainContent{
+    padding: 20px 20px 20px 20px;
+}
+
+.pag{
+    color: black;
+    background: #ffffff;
+    text-align: center;
+    align-content: center;
+}
+.pag h3{
+    font-size: 40px;
+}
+.pag span{
+    color: black;
+}
+
+footer{
+    background-color: #29303C;
+    border-top:1px solid dimgrey ;
+    align-items: center;
+    text-align: center;
+}
+footer span{  
+    margin-top: 5px;
+    color: snow;
+}
+
+footer li{
+    color: snow;
+    list-style: none;
+    font-size: 12px;
+}
+.footercontact{
+    display: none;
+}
+
+
+/*-----------otros*/
+
+.login {
+    margin: 100px 0 100px 100px;
+    top: 50%;
+	left: 50%;
+	width:300px;
+	height:300px;
+}
+.login h3 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+
+input { 
+	width: 100%; 
+	margin-bottom: 10px; 
+	background: rgba(0,0,0,0.3);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+}
+input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+.spinner{
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-left-color: #ffffff;
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+@media only screen and (max-width: 900px){
+    .mastHead{
+        height: 30px;
+    }
+    .mastHead li a{  
+        padding: 1px 2px;
+        font-size: 15px;
+    }
+    .mastHead a {
+        font-size: 20px;
+    }
+    .Content{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    
+    div#procontent {
+        display: none;
+        padding: 10px;
+        background-color: #f6f6f6;
+        width: 200px;
+        cursor: pointer;
+    }
+
+   
+
+    .Row img{
+        width: 80%;
+        height: 80%;
+        padding: 10px 10px 10px 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .Row{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background: #000428;
+        border-bottom: 1px solid cornflowerblue;
+        color: black;
+        align-content: center;
+        font-size: 15px;
+    }
+    .footercontact{
+        display: block;
+       
+        text-decoration: none;
+        color: snow;
+    }
+    .footercontact li {
+        list-style: none;
+    }
+    .footercontact li a {
+        margin-left: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .mastHead{
+        height: 30px;
+    }
+    .mastHead li a{  
+        padding: 1px 2px;
+        font-size: 12px;
+    }
+    .mastHead a {
+        font-size: 15px;
+    }
+    .Content{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    
+    #show,
+    #hide {
+        display: none;
+    }
+
+    div#procontent {
+        display: none;
+        padding: 10px;
+        background-color: #f6f6f6;
+        width: 200px;
+        cursor: pointer;
+    }
+
+    
+    .Row img{
+        width: 80%;
+        height: 80%;
+        padding: 1px 1px 1px 1px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .Row{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background: #000428;
+        border-bottom: 1px solid cornflowerblue;
+        color: snow;
+        align-content: center;
+        font-size: 12px;
+    }
+    .footercontact{
+        display: block;
+       
+        text-decoration: none;
+        color: snow;
+    }
+    .footercontact li {
+        list-style: none;
+    }
+    .footercontact li a {
+        margin-left: 20px;
+    }
+
+    
+  }

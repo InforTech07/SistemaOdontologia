@@ -14,8 +14,6 @@ import {Help} from "./Pages/Help.js";
 import PatientService from "../Services/PatientService.js"
 const patientService = new PatientService();
 
-
-
 export async function Router() {
     const $content=document.getElementById('contentpage');
     let {hash} = location;

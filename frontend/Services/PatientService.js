@@ -1,6 +1,6 @@
 class PatientService{
     constructor(){
-        this.URI = 'http://localhost:3000/api/patient';
+        this.URI = 'http://localhost:3000/api/paciente';
     }
 
     async getPatients(){
