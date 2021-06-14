@@ -30,7 +30,7 @@ Content-Type: application/json
 
 
 ### actualizacion de datos
-PUT http://localhost:3000/api/paciente
+PUT http://localhost:3000/api/paciente/54
 Content-Type: application/json
 
 { 
@@ -39,8 +39,7 @@ Content-Type: application/json
     "pdui":"2435455",
     "psexo":"Masculino",
     "ptelefono":"456789",
-    "pdireccion":"san pedro",
-    "id":54
+    "pdireccion":"san pedro"
 }
 
 

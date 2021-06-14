@@ -66,53 +66,6 @@ export async function Router() {
         case '#/paciente':
                         $content.appendChild(MenuApp()); 
                         $content.appendChild(Patients());   
-                        /*                     
-                        const btnsearch = document.getElementById('btnsearch');
-                        btnsearch.addEventListener('click', async function(e){
-                            e.preventDefault();
-                            const apellido = document.getElementById('papellido').value;
-                            document.querySelector('.spinner').style.display="block";
-                            let resultdb = await fetch(`http://localhost:3000/api/paciente/${apellido}`);
-                            const data = await resultdb.json();
-                            mostrarpaciente(data);
-                            console.log(data);
-                        })
-                        
-                        function mostrarpaciente(data){
-                            let d = document;
-                            const name = d.getElementById('pname');
-                            const lastname = d.getElementById('plastname');
-                            const dui = d.getElementById('pdui');
-                            const sex = d.getElementById('psex');
-                            const phone = d.getElementById('pphone');
-                            const dir = d.getElementById('pdir');
-                            const rname = d.getElementById('rname');
-                            const rparent = d.getElementById('rparent');
-                            const rphone = d.getElementById('rphone');
-                            localStorage.setItem('idpaciente',data[0].p1);
-                            name.value = data[0].p2;
-                            lastname.value= data[0].p3;
-                            dui.value= data[0].p4;
-                            sex.value= data[0].p5;
-                            phone.value= data[0].p6;
-                            dir.value= data[0].p7;
-                            rname.value= data[0].p8;
-                            rparent.value= data[0].p9;
-                            rphone.value= data[0].p10;
-                            document.querySelector('.spinner').style.display="none";
-                        }
-                        const btndelete = document.getElementById('pbtndelete');
-                        btndelete.addEventListener('click', async function(e){
-                            e.preventDefault();
-                            const idpaciente = localStorage.getItem('idpaciente');
-                            console.log('eliminando');
-                            let resultdb = await fetch(`http://localhost:3000/api/paciente/${idpaciente}`,{
-                                method: 'DELETE'
-                            });
-                            console.log(resultdb);
-                            var msg=({'json':'mesagee'})
-                            alert(JSON.stringify(msg));
-                        })   */
             break;
         case '#/citas':
                         $content.appendChild(MenuApp()); 

@@ -9,18 +9,18 @@ async function Dbconnect(sql,binds,autoCommit){
         cnn.release();
         return dbresult;
 
-  //  }catch (err){
-   //     console.error(err);
+   // }catch (err){
+    //    console.error(err);
    // } finally{
-    //    if (connection){
-     //       try{
-       //         await connection.close();
-        //    }catch (err){
-         //       console.error(err);
-          //  }
-     //   }
+     //   if (connection){
+       //     try{
+         //       await connection.close();
+          //  }catch (err){
+            //    console.error(err);
+           // }
+      // }
    // }
-    
+  
 }
 
 exports.Dbconnect = Dbconnect;

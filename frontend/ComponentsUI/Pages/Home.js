@@ -1,18 +1,20 @@
-import{MenuApp} from "../MainUI/MenuApp.js";
+
 export function Home() {
-    const $content = document.createElement('div');
     const $ContentHome = document.createElement('div');
     $ContentHome.classList.add('grid-container');
     $ContentHome.innerHTML=`
-        <div class="grid-item"> 
+        <div class="grid-item">
+            <img src="./Assets/img/doctor2.svg"/> 
             <h1>BIENVENIDO</h1>
-            <h1>AL SISTEMA</h1>
+            <div>
+                <span id="nombre"></span><sapn> | </span><span id="puesto"></span>
+                <div class="spinner" style="display: block;"></div>
+            </div>
         </div>
         <div class="grid-item">    
-             <img src="https://www.salud.gob.sv/wp-content/uploads/2020/10/banner_web_wpminsal_2020-v2-1.png"/>
+            <img src="./Assets/img/home.svg"/>
+             <h1>MODULO DE ODONTOLOGIA</h1>
         </div>  
         `;
-    $content.appendChild(MenuApp());
-    $content.appendChild($ContentHome);
-    return $content; 
+    return $ContentHome; 
 }

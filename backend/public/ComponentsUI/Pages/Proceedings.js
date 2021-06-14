@@ -8,7 +8,7 @@ export function Proceedings() {
             <h3>EXPEDIENTES</h3>
         <form id="bucarpaciente">
             <input type="search" id="es" placeholder="ingrese apellidos" required="required"/>
-            <button id="ebtnsearch"type="submit" class="btn btn-primary btn-block btn-large">Buscar</button>
+            <button id="ebtnsearch" type="submit" class="btn btn-primary btn-block btn-large">Buscar</button>
         </form>
         </div>
         </div> 
@@ -18,36 +18,12 @@ export function Proceedings() {
             <h4>DUI: <span id="e3"></span></h4>
         </div>
         <div class="grid-item-resultados">
-        <h5>DIAGNOSTICO Y RESULTADOS:</h5>
-        <table id ="datah">
-            <thead>
-                <tr>
-                    <th>Fecha</th>
-                    <th>DIAGNOSTICO</th>
-                    <th>RESULTADO</th>
-                    <th>TRATAMIENTO</th>
-                </tr>
-            </thead>
-        </table>
+            <h5>DIAGNOSTICO Y RESULTADOS:</h5>
+            <table id ="datah"></table>
         </dvi> 
         <div class="grid-item-resultados">
             <h5>ODONTOGRAMA:</h5>
-            <table>
-            <thead>
-                <tr>
-                    <th>FECHA</th>
-                    <th>DIENTE</th>
-                    <th>ESTADO DIENTE</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td>January</td>
-                <td>$100</td>
-                <td>$100</td>
-                </tr>  
-            </tbody>
-            </table>
+            <table id="datao"></table>
         </div>
         <div class="grid-item-data"> 
             <h5>INGRESO DE DATOS DIAGNOSTICOS RESULTADOS</h5>
@@ -96,6 +72,7 @@ export function Proceedings() {
                 lastname.innerHTML= data[0].p3;
                 duiu.innerHTML= data[0].p4;
                 gethistorialmedico(data[0].p1);
+                getodontograma(data[0].p1);
               //  document.querySelector('.spinner').style.display="none";
             }
 
@@ -103,8 +80,20 @@ export function Proceedings() {
             async function gethistorialmedico(eid){
                 let resultdb = await fetch(`http://localhost:3000/api/expediente/h/${eid}`);
                 const resulth = await resultdb.json();
+                const bodyRowd = d.getElementById('datah');
+                bodyRowd.innerHTML = null;
+                const $headdat = d.createElement('thead');
+                $headdat.innerHTML=`
+                    <tr>
+                        <th>Fecha</th>
+                        <th>DIAGNOSTICO</th>
+                        <th>RESULTADO</th>
+                        <th>TRATAMIENTO</th>
+                    </tr>
+                    `;
                 if(resulth != null){
                     const $bodyrow = d.createElement('tbody');
+                    $bodyrow.innerHTML= null;
                     for (let index = 0; index < resulth.length; index++) {
                          $bodyrow.innerHTML +=`
                             <tr>
@@ -115,16 +104,53 @@ export function Proceedings() {
                             <tr>
                             `;
                         }
-                        d.getElementById('datah').appendChild($bodyrow);
+                    bodyRowd.appendChild($headdat);
+                    bodyRowd.appendChild($bodyrow);
                 }else{
                     alert('No tiene historial medico');
+                    bodyRowd.innerHTML='No Tiene historial medico';
+                } 
+            } 
+
+             //consulta de odontograma
+             async function getodontograma(eid){
+                let resultdb = await fetch(`http://localhost:3000/api/expediente/od/${eid}`);
+                const resulto = await resultdb.json();
+                const bodyRow = d.getElementById('datao');
+                bodyRow.innerHTML = null;
+                const $headdata = d.createElement('thead');
+                $headdata.innerHTML=`
+                    <tr>
+                        <th>FECHA</th>
+                        <th>DIENTE</th>
+                        <th>ESTADO DIENTE</th>
+                    </tr>
+                    `;
+                if(resulto != null){
+                    const $rowData = d.createElement('tbody');
+                    $rowData.setAttribute('id','orow');
+                    for (let index = 0; index < resulto.length; index++) {
+                         $rowData.innerHTML +=`
+                                <tr>
+                                    <td>${resulto[index].o1}</td>
+                                    <td>${resulto[index].o2}</td>
+                                    <td>${resulto[index].o3}</td>
+                                </tr>
+                            `;
+                    }
+                    bodyRow.appendChild($headdata); 
+                    bodyRow.appendChild($rowData);
+                    
+                }else{
+                    alert('No tiene historial medico');
+                    bodyRow.innerHTML='No Tiene expediente odontograma';
                 } 
             } 
 
             //post a diagnsotico
             d.getElementById('ebtndiagnostico')
-                .addEventListener('click', async function(){
-                    
+                .addEventListener('click', async function(e){
+                    e.preventDefault();
                     const eid = localStorage.getItem('idexpediente');               
                     const eed = d.getElementById('ed').value;
                     const eer = d.getElementById('er').value;
@@ -148,36 +174,52 @@ export function Proceedings() {
                         let message = err.statusText || "Ocurrió un error";
                         alert(message);
                       }
+
+                      gethistorialmedico(eid);
                 })
 
                 //post  odontograma
-                d.getElementById('ebtnd')
-                .addEventListener('click', async function(){
-                    
-                    const eid = localStorage.getItem('idexpediente');               
-                    const eed = d.getElementById('en').value;
-                    const eer = d.getElementById('ee').value;
-                    try{
-                    let options = {
-                        method: "POST",
-                        headers: {
-                          "Content-type": "application/json; charset=utf-8"
-                        },
-                        body: JSON.stringify({
-                            eestado:eer,
-                            enumero:eed,
-                            eid:eid
-                          })
-                    }
-                         res = await fetch("http://localhost:3000/api/expediente/o", options);
-                         json = await res.json();
-                    }catch (err) {
-                        let message = err.statusText || "Ocurrió un error";
-                        alert(message);
-                      }
+            d.getElementById('ebtnd').addEventListener('click', async function(e){
+                        e.preventDefault();
+                        const eid = localStorage.getItem('idexpediente');               
+                        const eed = d.getElementById('en').value;
+                        const eer = d.getElementById('ee').value;
+                        try{
+                            let options = {
+                            method: "POST",
+                            headers: {
+                                "Content-type": "application/json; charset=utf-8"
+                            },
+                            body: JSON.stringify({
+                                eestado:eer,
+                                enumero:eed,
+                                eid:eid
+                            })
+                        }
+                            res = await fetch("http://localhost:3000/api/expediente/o", options);
+                            json = await res.json();
+                            
+                        }catch (err) {
+                            let message = err.statusText || "Ocurrió un error";
+                            alert(message);
+                         }
+                         getodontograma(eid);
                 })
-   
+                
+                
            }
     setTimeout(()=>expedientePage(),100);
     return $proceedings;
 }
+
+
+/*
+
+const $r=d.createElement('tr');
+$r.innerHTML= null;
+$r.innerHTML = `
+    <td>--</td>
+    <td>${eed}</td>
+    <td>${eid}</td>
+    `;
+d.getElementById('datao').appendChild($r);*/

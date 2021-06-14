@@ -1,6 +1,6 @@
 const {Router} = require("express");
 const router = Router();
-const DB = require('../config/dbconnection');
+const DB = require('../config/dbconnection.js');
 
 //Get
 router.get("/:apellidos", async (req,res)=>{
@@ -34,18 +34,21 @@ router.post('/', async (req,res)=>{
     sql=`BEGIN SP_CREAR_PACIENTE(V_NOMBRES => :pnombres,V_APELLIDOS => :papellidos,V_DUI => :pdui,V_SEXO => :psexo,
          V_TELEFONO => :ptelefono,V_DIRECCION => :pdireccion,V_NOMBREAPELLIDO => :rnombreapellido,V_PARENTESCO =>:rparentesco,V_TELEFONOR => :rtelefono); END;`
     await DB.Dbconnect(sql,[pnombres,papellidos,pdui,psexo,ptelefono,pdireccion,rnombreapellido,rparentesco,rtelefono],true);
-    res.status(200).json({"msg": "Registro Creado"})
-})
+    res.status(200).json({"msg": "Registro Creado"});
+});
 
 //UPDATE
-router.put("/", async (req, res) => {
-   const {id,pnombres,papellidos,pdui,psexo,ptelefono,pdireccion,rnombreapellido,rparentesco,rtelefono} = req.body;
-   sql =`SP_ACTUALIZAR_PACIENTE(V_IDD => :id,V_NOMBRES => :pnombres,V_APELLIDOS => :papellidos,V_DUI => :pdui,V_SEXO => :psexo,
-    V_TELEFONO => :ptelefono,V_DIRECCION => :pdireccion,V_NOMBREAPELLIDO => :rnombreapellido,V_PARENTESCO =>:rparentesco,V_TELEFONOR => :rtelefono); END;`
-    await DB.Dbconnect(sql[id,pnombres,papellidos,pdui,psexo,ptelefono,pdireccion,rnombreapellido,rparentesco,rtelefono], true);
-    res.status(200).json({"msg": "Paciente Actualizado"})
+router.put("/:id", async (req, res) => {
+   const {pnombres,papellidos,pdui,psexo,ptelefono,pdireccion} = req.body;
+   const  id = req.params.id;
+   console.log(id);
+   console.log(pnombres);
+   sql ="UPDATE TBL_PACIENTE SET NOMBRES = :pnombres,APELLIDOS = :papellidos, DUI = :pdui,SEXO = :psexo,TELEFONO = :ptelefono,DIRECCION = :pdireccion WHERE ID = :id";
+  // sql =`BEGIN SP_ACTUALIZAR_PACIENTE(V_IDD => :id,V_NOMBRES => :pnombres,V_APELLIDOS => :papellidos,V_DUI => :pdui,V_SEXO => :psexo,V_TELEFONO => :ptelefono,V_DIRECCION => :pdireccion,V_NOMBREAPELLIDO => :rnombreapellido,V_PARENTESCO =>:rparentesco,V_TELEFONOR => :rtelefono); END;`
+   await DB.Dbconnect(sql[pnombres,papellidos,pdui,psexo,ptelefono,pdireccion,id], true);
+   res.status(200).json({"msg": "Paciente Actualizado"})
 
-})
+});
 
 //delete
 router.delete("/:pidd", async (req, res) => {
@@ -53,6 +56,6 @@ router.delete("/:pidd", async (req, res) => {
     sql = "UPDATE TBL_PACIENTE  SET ESTADO = 1 WHERE ID = :idpaciente";
     await DB.Dbconnect(sql, [idpaciente], true);
     res.json({ "msg": "Paciente Eliminado" })
-})
+});
 
 module.exports=router;

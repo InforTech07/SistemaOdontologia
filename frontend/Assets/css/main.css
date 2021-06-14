@@ -3,13 +3,20 @@ html {
 }
  
 body {
-        background: #303845;
+        background: #023f62;;
         
 }
 
 .Container{
     padding-left: 5%;
     padding-right: 5%;
+}
+
+.Container h5{
+    color: dimgrey;
+    text-decoration-line: underline;
+    text-decoration-color: dimgray;
+    /*border-bottom: 1px solid dimgray;*/
 }
 
 .showcase {
@@ -41,7 +48,6 @@ body {
 }
 .principales h3{
     font-size: 20px;
-    margin: 10px 0;
     color: black;
 }
 .misvis{
@@ -60,21 +66,21 @@ body {
 
 .grid-container {
     display: grid;
+    place-items: center;
     grid-template-columns: 50% 50%;
     background-color:#023f62;
     padding: 5px;
 }
   
 .grid-item {
-    background-color: #313945;
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    position: relative;
     padding: 5px;
     font-size: 20px;
     text-align: center;
 }
 .grid-item img{
-    width: 80%;
-    height: 150px;
+    width: 300px;
+    height: 300px;
 }
 .grid-item a{
     color: snow;
@@ -87,6 +93,107 @@ body {
 
 .grid-item h1{
     color: #ffffff;
+}
+
+.grid-item span{
+    font-size: 30px;
+    color: dimgrey;
+}
+
+.Container{
+    background-color:#023f62;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+
+.grid-item-search {
+    position: relative;
+    margin-top: 50px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 10% 30% 60%;
+    border-bottom: 1px solid dimgray;
+    margin-bottom: 15px;
+}
+.grid-item-search form{
+    display: grid;
+    grid-template-columns: 65% 25%;
+    gap: 10%;
+}
+
+.grid-item-search img{
+    width: 80px;
+    height: 80px;
+}
+
+.grid-item-search button{
+    width: 100px;
+}
+
+.grid-item-search input{
+    width: 250px;
+}
+.grid-item-data {
+    position: relative;
+    border-bottom: 1px solid dimgray;
+    margin-top: 20px;
+}
+
+.grid-item-data form{
+    display: grid;
+    grid-template-columns: 15% 35%  15% 35%;
+}
+
+.grid-item-data input{
+    width: 80%;
+    font-size: 20px;
+}
+.grid-item-data span{
+    margin-left: 20px;
+}
+
+.grid-item-option{
+    position: relative;
+    display: grid;
+    place-items: center;
+    grid-template-columns:  30% 30% 30%;
+    gap: 10%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.grid-item-option img{
+    width: 80px;
+    height: 80px;
+}
+.grid-item-option button{
+    margin-left: 30px;
+}
+
+.grid-item-resultados{
+    position: relative;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.grid-item-resultados table, th, td {
+    border: 1px solid dimgrey;
+  }
+
+.grid-item-resultados thead {
+    background: #303845;
+}
+.grid-item-resultados tbody {
+    background: dimgrey;
+}
+.grid-item-resultados th{
+    width: 200px;
+    text-align: center;
 }
 
 #navegador ul{
@@ -164,48 +271,6 @@ body {
     margin-right: 5%;
 }
 
-.formulario-registro {
-    width: 80%;
-    background: #023f62;
-    padding: 20px;
-    margin: auto;
-    margin-top: 1px;
-    border-radius: 4px;
-    color: white;
-    text-align: left;
-}
-    
-.formulario-registro h4 {
-        font-size: 10px;
-        margin-bottom: 2px;
-}
- 
-.formulario-registro input{
-    width: 90%;
-    font-size: 10px;
-    border-radius: 4px;
-    border: 1px solid dimgray;
-}
-
-.controles {
-        width: 90%;
-        background: #313b44;
-        padding: 1px;
-        border-radius: 4px;
-        border: 1px solid #ffffff;
-        margin-bottom: 1px;  
-        color: white;
-}
-
-.formulario-registro .botons {
-        width: 90%;
-        background: #d1d4d4;
-        border: none;
-        padding: 3px;
-        color: black;
-        margin: 16px 0;
-        font-size: 8px;
-}
     
 
 .ContainerVideo{
@@ -279,6 +344,60 @@ footer li{
 .footercontact{
     display: none;
 }
+
+
+/*-----------otros*/
+
+.login {
+    margin: 100px 0 100px 100px;
+    top: 50%;
+	left: 50%;
+	width:300px;
+	height:300px;
+}
+.login h3 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+
+input { 
+	width: 100%; 
+	margin-bottom: 10px; 
+	background: rgba(0,0,0,0.3);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+}
+input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+.spinner{
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-left-color: #ffffff;
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
 
 @media only screen and (max-width: 900px){
     .mastHead{

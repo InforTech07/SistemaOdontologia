@@ -10,13 +10,25 @@ class PatientService{
         return data;
     }
 
-    async postPatient(patient){
+    async postPatient(formData){
+        console.log('service');
+                            console.log(formData.getAll('pnombres'));
+                            console.log(formData.getAll('papellidos'));
+                            console.log(formData.getAll('pdui'));
+                            console.log(formData.getAll('ptelefono'));
+                            console.log(formData.getAll('ptelefono'));
+                            console.log(formData.getAll('pdireccion'));
+                            console.log(formData.getAll('rnombreapellido'));
+                            console.log(formData.getAll('rparentesco'));
+                            console.log(formData.getAll('rtelefono'));
+
+        
         const res = await fetch(this.URI,{
             method: 'POST',
-            body: patient
+            body: formData
         })
-        const data = await res.json();
-        console.log(data);
+        //const data = await res.json();
+       // console.log(data);*/
     }
 
     async deletePatient(){
@@ -26,7 +38,6 @@ class PatientService{
             },
             method:'DELETE'
         })
-
         const data =  await res.json();
         console.log(data);
     }

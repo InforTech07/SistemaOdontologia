@@ -24,7 +24,7 @@ router.get("/:apellidos", async (req,res)=>{
 // get diagnosticos
 router.get("/h/:eid", async (req,res)=>{
     const eid = req.params.eid;
-    sql = "SELECT FECHA, DIAGNOSTICO, RESULTADO, TRATAMIENTO FROM TBL_HISTORIALMEDICO WHERE IDPACIENTE = :eid";
+    sql = "SELECT TO_CHAR(FECHA, 'DD/MM/YYYY'), DIAGNOSTICO, RESULTADO, TRATAMIENTO FROM TBL_HISTORIALMEDICO WHERE IDPACIENTE = :eid";
     let result = await DB.Dbconnect(sql,[eid],false);
     Historial =[];
     result.rows.map(h => {
@@ -39,6 +39,26 @@ router.get("/h/:eid", async (req,res)=>{
 
     res.json(Historial);
 }); 
+
+
+// get odontograma
+router.get("/od/:eid", async (req,res)=>{
+    const eid = req.params.eid;
+    sql = "SELECT TO_CHAR(FECHA, 'DD/MM/YYYY'), IDDIENTE, ESTADODIENTE FROM TBL_ODONTOGRAMA WHERE IDPACIENTE = :eid";
+    let result = await DB.Dbconnect(sql,[eid],false);
+    Odontograma =[];
+    result.rows.map(o => {
+        let oSchema ={
+            "o1": o[0],
+            "o2": o[1],
+            "o3": o[2],
+        }
+        Odontograma.push(oSchema);
+    })
+
+    res.json(Odontograma);
+}); 
+
 
 
 //post diagnositico

@@ -11,7 +11,6 @@ export function MenuApp() {
     <li><a href="#/paciente">PACIENTE</a></li>
     <li><a href="#/citas">CITAS</a></li>
     <li><a href="#/expediente">EXPEDIENTE</a></li>
-    <li><a href="#/medico">MEDICO</a></li>
     <li><a href="#/reporte">REPORTE</a></li>
     <li><a href="#/usuario">USUARIOS</a></li>
     <li><a href="#/ayuda">AYUDA</a></li>
